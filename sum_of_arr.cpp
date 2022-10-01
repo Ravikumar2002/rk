@@ -1,11 +1,16 @@
 #include<iostream>
 using namespace std;
+int multiply(int arr[],int n)
+{
+	int multi=1;
+	for(int i=0;i<n;i++){
+		multi*=arr[i];
+	}
+	return multi;
+}
 
 int getsum(int arr[],int n){
 	int sum =0;
-	if(n%2!=0){
-		return 0;
-	}
 	for(int i=0;i<n;i++){
 		sum=sum+arr[i];
 	}
@@ -23,6 +28,7 @@ int main(){
 	}
 
 	cout<<getsum(arr,n);
+	cout<<multiply(arr,n);
 
 
 	return 0;
